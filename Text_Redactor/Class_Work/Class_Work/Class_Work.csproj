@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="images\Atxt.bmp" />
+		<None Remove="images\Bold.bmp" />
+		<None Remove="images\Copy_txt.bmp" />
+		<None Remove="images\Ctxt.bmp" />
+		<None Remove="images\cut.bmp" />
+		<None Remove="images\depositphotos_44543685-stock-illustration-vector-text-editor-mini-icons.jpg" />
+		<None Remove="images\Italic.bmp" />
+		<None Remove="images\Ltxt.bmp" />
+		<None Remove="images\Paste_txt.bmp" />
+		<None Remove="images\Rtxt.bmp" />
+		<None Remove="images\underline.bmp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="images\Atxt.bmp" />
+		<Resource Include="images\Bold.bmp" />
+		<Resource Include="images\Copy_txt.bmp" />
+		<Resource Include="images\Ctxt.bmp" />
+		<Resource Include="images\cut.bmp" />
+		<Resource Include="images\depositphotos_44543685-stock-illustration-vector-text-editor-mini-icons.jpg" />
+		<Resource Include="images\Italic.bmp" />
+		<Resource Include="images\Ltxt.bmp" />
+		<Resource Include="images\Paste_txt.bmp" />
+		<Resource Include="images\Rtxt.bmp" />
+		<Resource Include="images\underline.bmp" />
+	</ItemGroup>
+
+</Project>

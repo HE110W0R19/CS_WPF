@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "KeyBoard_WPF/1.0.0": {
+        "runtime": {
+          "KeyBoard_WPF.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KeyBoard_WPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
