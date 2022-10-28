@@ -19,6 +19,7 @@ namespace Class_Work_WPF
         {
             InitializeComponent();
             key_change(caps_on);
+            stop_button.IsEnabled = false;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -851,11 +852,21 @@ namespace Class_Work_WPF
         private void start_button_Click(object sender, RoutedEventArgs e)
         {
             Rand_text(lvl_num);
+            start_button.IsEnabled = false;
+            stop_button.IsEnabled = true;
         }
 
         private void difficutly_slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             lvl_num = Convert.ToInt32(difficutly_slider.Value);
+        }
+
+        private void stop_button_Click(object sender, RoutedEventArgs e)
+        {
+            ContentBlock.Text = "";
+            WriteTextBlock.Text = "";
+            stop_button.IsEnabled = false;
+            start_button.IsEnabled = true;
         }
     }
 }
