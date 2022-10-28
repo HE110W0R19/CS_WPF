@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -12,6 +13,8 @@ namespace Class_Work_WPF
     public partial class MainWindow : Window
     {
         bool caps_on = true;
+        int lvl_num = 2;
+        string all_simbols = "QWER TYUI OPASDF GHJKL ZXCVB NMqwer ty uiopasd fghjklzx cvbnm~!@#$%^&* ()_+{}|:\"<>?`12 3456789 0-=[]\\;',./";
         public MainWindow()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace Class_Work_WPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Grid_Key_Down(object sender, KeyEventArgs e)
@@ -159,7 +162,7 @@ namespace Class_Work_WPF
                     RWin_Click(LWIN, null);
                     break;
                 case Key.OemMinus:
-                    Minus_Click(minus,null);
+                    Minus_Click(minus, null);
                     break;
                 case Key.OemPlus:
                     Plus_Click(plus, null);
@@ -222,6 +225,18 @@ namespace Class_Work_WPF
             DoubleAnimation anim2 = new DoubleAnimation(5, 0, TimeSpan.FromSeconds(0.1));
             tran.BeginAnimation(TranslateTransform.YProperty, anim1);
             tran.BeginAnimation(TranslateTransform.YProperty, anim2);
+        }
+
+        private void Rand_text(int lvl_value)
+        {
+            var Rand = new Random();
+            string ready_text = "";
+            for (int i = 0; i < 70; ++i)
+            {
+                int r_num = Rand.Next(2, 46);
+                ready_text += all_simbols[r_num+lvl_value];
+            }
+            ContentBlock.Text = ready_text;
         }
 
         private void key_change(bool stat)
@@ -831,6 +846,16 @@ namespace Class_Work_WPF
                 this.WriteTextBlock.Text += "+";
             else
                 this.WriteTextBlock.Text += "=";
+        }
+
+        private void start_button_Click(object sender, RoutedEventArgs e)
+        {
+            Rand_text(lvl_num);
+        }
+
+        private void difficutly_slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            lvl_num = Convert.ToInt32(difficutly_slider.Value);
         }
     }
 }
