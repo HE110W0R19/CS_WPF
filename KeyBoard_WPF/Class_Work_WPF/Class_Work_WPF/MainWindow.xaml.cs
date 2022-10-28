@@ -11,10 +11,11 @@ namespace Class_Work_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool caps_on = false;
+        bool caps_on = true;
         public MainWindow()
         {
             InitializeComponent();
+            key_change(caps_on);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -176,7 +177,7 @@ namespace Class_Work_WPF
                     Lparentheses_Click(Left_parentheses, null);
                     break;
                 case Key.Oem6:
-                    Rparentheses_Click(Reft_parentheses1, null);
+                    Rparentheses_Click(Right_parentheses, null);
                     break;
                 case Key.Oem1:
                     DoubleDot_Click(doubleDot, null);
@@ -221,6 +222,115 @@ namespace Class_Work_WPF
             DoubleAnimation anim2 = new DoubleAnimation(5, 0, TimeSpan.FromSeconds(0.1));
             tran.BeginAnimation(TranslateTransform.YProperty, anim1);
             tran.BeginAnimation(TranslateTransform.YProperty, anim2);
+        }
+
+        private void key_change(bool stat)
+        {
+            switch (stat)
+            {
+                case true:
+                    UppComma.Content = "~";
+                    One.Content = "!";
+                    Two.Content = "@";
+                    Three.Content = "#";
+                    four.Content = "$";
+                    five.Content = "%";
+                    six.Content = "^";
+                    seven.Content = "&";
+                    eight.Content = "*";
+                    nine.Content = "(";
+                    zero.Content = ")";
+                    minus.Content = "_";
+                    plus.Content = "+";
+                    Left_parentheses.Content = "{";
+                    Right_parentheses.Content = "}";
+                    Vslash.Content = "|";
+                    doubleDot.Content = ":";
+                    DoubleComma.Content = "\"";
+                    comma.Content = "<";
+                    dot.Content = ">";
+                    Question.Content = "?";
+                    Q.Content = Q.Content.ToString().ToUpper();
+                    W.Content = W.Content.ToString().ToUpper();
+                    E.Content = E.Content.ToString().ToUpper();
+                    R.Content = R.Content.ToString().ToUpper();
+                    T.Content = T.Content.ToString().ToUpper();
+                    Y.Content = Y.Content.ToString().ToUpper();
+                    U.Content = U.Content.ToString().ToUpper();
+                    I.Content = I.Content.ToString().ToUpper();
+                    O.Content = O.Content.ToString().ToUpper();
+                    P.Content = P.Content.ToString().ToUpper();
+                    A.Content = A.Content.ToString().ToUpper();
+                    S.Content = S.Content.ToString().ToUpper();
+                    D.Content = D.Content.ToString().ToUpper();
+                    F.Content = F.Content.ToString().ToUpper();
+                    G.Content = G.Content.ToString().ToUpper();
+                    H.Content = H.Content.ToString().ToUpper();
+                    J.Content = J.Content.ToString().ToUpper();
+                    K.Content = K.Content.ToString().ToUpper();
+                    L.Content = L.Content.ToString().ToUpper();
+                    Z.Content = Z.Content.ToString().ToUpper();
+                    X.Content = X.Content.ToString().ToUpper();
+                    C.Content = C.Content.ToString().ToUpper();
+                    V.Content = V.Content.ToString().ToUpper();
+                    B.Content = B.Content.ToString().ToUpper();
+                    N.Content = N.Content.ToString().ToUpper();
+                    M.Content = M.Content.ToString().ToUpper();
+                    CapsLockBulb.Background = System.Windows.Media.Brushes.Red;
+                    break;
+                case false:
+                    UppComma.Content = "`";
+                    One.Content = "1";
+                    Two.Content = "2";
+                    Three.Content = "3";
+                    four.Content = "4";
+                    five.Content = "5";
+                    six.Content = "6";
+                    seven.Content = "7";
+                    eight.Content = "8";
+                    nine.Content = "9";
+                    zero.Content = "0";
+                    minus.Content = "-";
+                    plus.Content = "=";
+                    Left_parentheses.Content = "[";
+                    Right_parentheses.Content = "]";
+                    Vslash.Content = "\\";
+                    doubleDot.Content = ";";
+                    DoubleComma.Content = "\'";
+                    comma.Content = ",";
+                    dot.Content = ".";
+                    Question.Content = "";
+                    Q.Content = Q.Content.ToString().ToLower();
+                    W.Content = W.Content.ToString().ToLower();
+                    E.Content = E.Content.ToString().ToLower();
+                    R.Content = R.Content.ToString().ToLower();
+                    T.Content = T.Content.ToString().ToLower();
+                    Y.Content = Y.Content.ToString().ToLower();
+                    U.Content = U.Content.ToString().ToLower();
+                    I.Content = I.Content.ToString().ToLower();
+                    O.Content = O.Content.ToString().ToLower();
+                    P.Content = P.Content.ToString().ToLower();
+                    A.Content = A.Content.ToString().ToLower();
+                    S.Content = S.Content.ToString().ToLower();
+                    D.Content = D.Content.ToString().ToLower();
+                    F.Content = F.Content.ToString().ToLower();
+                    G.Content = G.Content.ToString().ToLower();
+                    H.Content = H.Content.ToString().ToLower();
+                    J.Content = J.Content.ToString().ToLower();
+                    K.Content = K.Content.ToString().ToLower();
+                    L.Content = L.Content.ToString().ToLower();
+                    Z.Content = Z.Content.ToString().ToLower();
+                    X.Content = X.Content.ToString().ToLower();
+                    C.Content = C.Content.ToString().ToLower();
+                    V.Content = V.Content.ToString().ToLower();
+                    B.Content = B.Content.ToString().ToLower();
+                    N.Content = N.Content.ToString().ToLower();
+                    M.Content = M.Content.ToString().ToLower();
+                    CapsLockBulb.Background = System.Windows.Media.Brushes.Silver;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void Q_Click(object sender, RoutedEventArgs e)
@@ -324,7 +434,7 @@ namespace Class_Work_WPF
 
         private void Rparentheses_Click(object sender, RoutedEventArgs e)
         {
-            key_anim(Reft_parentheses1);
+            key_anim(Right_parentheses);
             if (caps_on == true)
                 this.WriteTextBlock.Text += "}";
             else
@@ -591,10 +701,12 @@ namespace Class_Work_WPF
         private void CL_Click(object sender, RoutedEventArgs e)
         {
             key_anim(CapsLock);
+            key_anim(CapsLockBulb);
             if (caps_on == true)
                 caps_on = false;
             else if (caps_on == false)
                 caps_on = true;
+            key_change(caps_on);
         }
 
         private void TAB_Click(object sender, RoutedEventArgs e)

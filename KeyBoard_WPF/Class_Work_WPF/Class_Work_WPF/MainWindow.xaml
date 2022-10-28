@@ -17,7 +17,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </LinearGradientBrush.RelativeTransform>
-                <GradientStop Color="#FFED5EFF" Offset="1"/>
+                <GradientStop Color="#FFB18C5C" Offset="1"/>
                 <GradientStop Color="White"/>
             </LinearGradientBrush>
         </Grid.Background>
@@ -48,109 +48,109 @@
             <ColumnDefinition Width="67*"/>
             <ColumnDefinition Width="67*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="UppComma" Grid.Row="2" Grid.Column="0" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="UppCom_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="UppComma" Grid.Row="2" Grid.Column="0" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="UppCom_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="~">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> `
+            </Button.Style>
         </Button>
-        <Button x:Name="One" Grid.Row="2" Grid.Column="1" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="One_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="One" Grid.Row="2" Grid.Column="1" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="One_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="!">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 1
+            </Button.Style>
         </Button>
-        <Button x:Name="Two" Grid.Row="2" Grid.Column="2" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Two_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="Two" Grid.Row="2" Grid.Column="2" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Two_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="@">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 2
+            </Button.Style>
         </Button>
-        <Button x:Name="Three" Grid.Row="2" Grid.Column="3" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Gold" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Three_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="Three" Grid.Row="2" Grid.Column="3" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Gold" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Three_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="#">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 3
+            </Button.Style>
         </Button>
-        <Button x:Name="four" Grid.Row="2" Grid.Column="4" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Grid.ColumnSpan="2" Click="Four_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="four" Grid.Row="2" Grid.Column="4" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Grid.ColumnSpan="2" Click="Four_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="$">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 4
+            </Button.Style>
         </Button>
-        <Button x:Name="five" Grid.Row="2" Grid.Column="6" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Five_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="five" Grid.Row="2" Grid.Column="6" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Five_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="%">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 5
+            </Button.Style>
         </Button>
-        <Button x:Name="six" Grid.Row="2" Grid.Column="7" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Six_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="six" Grid.Row="2" Grid.Column="7" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Six_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="^">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 6
+            </Button.Style>
         </Button>
-        <Button x:Name="seven" Grid.Row="2" Grid.Column="8" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Seven_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="seven" Grid.Row="2" Grid.Column="8" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Seven_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="&amp;">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 7
+            </Button.Style>
         </Button>
-        <Button x:Name="eight" Grid.Row="2" Grid.Column="9" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Eight_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="eight" Grid.Row="2" Grid.Column="9" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Eight_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="*">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 8
+            </Button.Style>
         </Button>
-        <Button x:Name="nine" Grid.Row="2" Grid.Column="10" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Nine_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="nine" Grid.Row="2" Grid.Column="10" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Nine_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="(">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 9
+            </Button.Style>
         </Button>
-        <Button x:Name="zero" Grid.Row="2" Grid.Column="11" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Gold" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Zero_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="zero" Grid.Row="2" Grid.Column="11" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Gold" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Zero_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content=")">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> 0
+            </Button.Style>
         </Button>
-        <Button x:Name="minus" Grid.Row="2" Grid.Column="12" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Minus_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="minus" Grid.Row="2" Grid.Column="12" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Minus_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="_">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> _
+            </Button.Style>
         </Button>
-        <Button x:Name="plus" Grid.Row="2" Grid.Column="13" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Plus_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="plus" Grid.Row="2" Grid.Column="13" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Plus_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="+">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> +
+            </Button.Style>
         </Button>
         <Button x:Name="BakcSpace" Grid.Row="2" Grid.Column="14" Margin="3,3,3,3" FontSize="20" Grid.ColumnSpan="2" BorderThickness="1,1,1,1" Background="#FFBABABA" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="BS_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
@@ -257,7 +257,7 @@
                 <Style/>
             </Button.Style>
         </Button>
-        <Button x:Name="Left_parentheses" Grid.Row="3" Grid.Column="12" FontSize="20" Content="[" Grid.ColumnSpan="2" Margin="36,3,36,3" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Lparentheses_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="Left_parentheses" Grid.Row="3" Grid.Column="12" FontSize="20" Content="{}{" Grid.ColumnSpan="2" Margin="36,3,36,3" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Lparentheses_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -265,7 +265,7 @@
                 <Style/>
             </Button.Style>
         </Button>
-        <Button x:Name="Reft_parentheses1" Grid.Row="3" Grid.Column="13" FontSize="20" Content="]" Grid.ColumnSpan="2" Margin="36,3,36,3" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Rparentheses_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="Right_parentheses" Grid.Row="3" Grid.Column="13" FontSize="20" Content="}" Grid.ColumnSpan="2" Margin="36,3,36,3" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Rparentheses_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -306,11 +306,10 @@
                 <Style/>
             </Button.Style> D
         </Button>
-        <Button x:Name="F" Grid.Row="4" Grid.Column="6" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="F_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="F" Content="F" Grid.Row="4" Grid.Column="6" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="F_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <TextBlock TextDecorations="Underline" Text="F" FontWeight="Normal" />
         </Button>
         <Button x:Name="G" Grid.Row="4" Grid.Column="7" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="DodgerBlue" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="G_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
@@ -328,11 +327,10 @@
                 <Style/>
             </Button.Style> H
         </Button>
-        <Button x:Name="J" Grid.Row="4" Grid.Column="9" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="J_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="J" Content="J" Grid.Row="4" Grid.Column="9" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Magenta" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="J_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
-            <TextBlock Text="J" TextDecorations="Underline"/>
         </Button>
         <Button x:Name="K" Grid.Row="4" Grid.Column="10" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="Crimson" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="K_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
@@ -350,21 +348,21 @@
                 <Style/>
             </Button.Style> L
         </Button>
-        <Button x:Name="doubleDot" Grid.Row="4" Grid.Column="12" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="DoubleDot_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="doubleDot" Grid.Row="4" Grid.Column="12" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="DoubleDot_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content=":">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> :
+            </Button.Style>
         </Button>
-        <Button x:Name="DoubleComma" Grid.Row="4" Grid.Column="13" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="DoubleComma_Click" BorderBrush="Black" SnapsToDevicePixels="True">
+        <Button x:Name="DoubleComma" Grid.Row="4" Grid.Column="13" Margin="3,3,3,3" FontSize="20" BorderThickness="1,1,1,1" Background="GreenYellow" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="DoubleComma_Click" BorderBrush="Black" SnapsToDevicePixels="True" Content="&quot;">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Style>
                 <Style/>
-            </Button.Style> "
+            </Button.Style>
         </Button>
         <Button x:Name="Enter" Grid.Row="4" Grid.Column="14" Margin="3,3,3,3" FontSize="20" Grid.ColumnSpan="2" BorderThickness="1,1,1,1" Background="#FFBABABA" Foreground="Black" FontWeight="Normal" FontFamily="Verdana" FontStyle="Normal" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0,0" Click="Enter_Click" BorderBrush="Black" SnapsToDevicePixels="True">
             <Button.Effect>
@@ -537,7 +535,8 @@
         <Label Content="Speed: " HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="62"/>
         <Label x:Name="speed_counter" Content="0" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2" Height="31" Width="19"/>
         <Label Content="chars/min" HorizontalAlignment="Left" Margin="27,3,0,0" VerticalAlignment="Top" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1" Height="31" Width="80"/>
-        <TextBlock Margin="10,20,10,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Background="#FFE2FFFD" x:Name="WriteTextBlock" Grid.ColumnSpan="16" Grid.Row="1"/>
+        <TextBlock Margin="10,20,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Background="#FFE2FFFD" x:Name="WriteTextBlock" Grid.ColumnSpan="16" Grid.Row="1" FontSize="24" FontFamily="Global Sans Serif" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}" TextAlignment="Left"/>
+        <Button x:Name="CapsLockBulb" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="48,10,0,0" Grid.Row="4" VerticalAlignment="Top" Height="7" Width="8" Background="Red"/>
 
     </Grid>
 </Window>
