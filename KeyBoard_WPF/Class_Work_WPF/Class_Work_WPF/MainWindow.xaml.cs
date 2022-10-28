@@ -12,6 +12,7 @@ namespace Class_Work_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        int wrong_sims_counter = 0;
         bool caps_on = true;
         int lvl_num = 2;
         string all_simbols = "QWER TYUI OPASDF GHJKL ZXCVB NMqwer ty uiopasd fghjklzx cvbnm~!@#$%^&* ()_+{}|:\"<>?`12 3456789 0-=[]\\;',./";
@@ -240,6 +241,42 @@ namespace Class_Work_WPF
             ContentBlock.Text = ready_text;
         }
 
+        private void text_checker()
+        {
+            if(ContentBlock.Text.Length > 1)
+            {
+                if (Case_checker.IsChecked == false)
+                {
+                    for (int i = 0; i < WriteTextBlock.Text.Length; ++i)
+                    {
+                        if (WriteTextBlock.Text[i] != ContentBlock.Text[i])
+                        {
+                            ++wrong_sims_counter;
+                            WriteTextBlock.Background = System.Windows.Media.Brushes.Crimson;
+                            fails_counter.Text = wrong_sims_counter.ToString();
+                        }
+                        else
+                            WriteTextBlock.Background = System.Windows.Media.Brushes.Beige;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < WriteTextBlock.Text.Length; ++i)
+                    {
+                        if (WriteTextBlock.Text[i].ToString().ToLower() !=
+                            ContentBlock.Text[i].ToString().ToLower())
+                        {
+                            ++wrong_sims_counter;
+                            WriteTextBlock.Background = System.Windows.Media.Brushes.Crimson;
+                            fails_counter.Text = wrong_sims_counter.ToString();
+                        }
+                        else
+                            WriteTextBlock.Background = System.Windows.Media.Brushes.Beige;
+                    }
+                }
+            }
+        }
+
         private void key_change(bool stat)
         {
             switch (stat)
@@ -355,7 +392,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "Q";
             else
-                this.WriteTextBlock.Text += "q";
+                this.WriteTextBlock.Text += "q"; text_checker();
         }
 
         private void W_Click(object sender, RoutedEventArgs e)
@@ -364,7 +401,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "W";
             else
-                this.WriteTextBlock.Text += "w";
+                this.WriteTextBlock.Text += "w"; text_checker();
         }
 
         private void E_Click(object sender, RoutedEventArgs e)
@@ -373,7 +410,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "E";
             else
-                this.WriteTextBlock.Text += "e";
+                this.WriteTextBlock.Text += "e"; text_checker();
         }
 
         private void R_Click(object sender, RoutedEventArgs e)
@@ -382,7 +419,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "R";
             else
-                this.WriteTextBlock.Text += "r";
+                this.WriteTextBlock.Text += "r"; text_checker();
         }
 
         private void T_Click(object sender, RoutedEventArgs e)
@@ -391,7 +428,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "T";
             else
-                this.WriteTextBlock.Text += "t";
+                this.WriteTextBlock.Text += "t"; text_checker();
         }
 
         private void Y_Click(object sender, RoutedEventArgs e)
@@ -400,7 +437,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "Y";
             else
-                this.WriteTextBlock.Text += "y";
+                this.WriteTextBlock.Text += "y"; text_checker();
         }
 
         private void U_Click(object sender, RoutedEventArgs e)
@@ -409,7 +446,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "U";
             else
-                this.WriteTextBlock.Text += "u";
+                this.WriteTextBlock.Text += "u"; text_checker();
         }
 
         private void I_Click(object sender, RoutedEventArgs e)
@@ -418,7 +455,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "I";
             else
-                this.WriteTextBlock.Text += "i";
+                this.WriteTextBlock.Text += "i"; text_checker();
         }
 
         private void O_Click(object sender, RoutedEventArgs e)
@@ -427,7 +464,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "O";
             else
-                this.WriteTextBlock.Text += "o";
+                this.WriteTextBlock.Text += "o"; text_checker();
         }
 
         private void P_Click(object sender, RoutedEventArgs e)
@@ -436,7 +473,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "P";
             else
-                this.WriteTextBlock.Text += "p";
+                this.WriteTextBlock.Text += "p"; text_checker();
         }
 
         private void Lparentheses_Click(object sender, RoutedEventArgs e)
@@ -445,7 +482,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "{";
             else
-                this.WriteTextBlock.Text += "[";
+                this.WriteTextBlock.Text += "["; text_checker();
         }
 
         private void Rparentheses_Click(object sender, RoutedEventArgs e)
@@ -454,7 +491,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "}";
             else
-                this.WriteTextBlock.Text += "]";
+                this.WriteTextBlock.Text += "]"; text_checker();
         }
 
         private void Vslash_Click(object sender, RoutedEventArgs e)
@@ -463,7 +500,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "|";
             else
-                this.WriteTextBlock.Text += @"\";
+                this.WriteTextBlock.Text += @"\"; text_checker();
         }
 
         private void A_Click(object sender, RoutedEventArgs e)
@@ -472,7 +509,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "A";
             else
-                this.WriteTextBlock.Text += "a";
+                this.WriteTextBlock.Text += "a"; text_checker();
         }
 
         private void S_Click(object sender, RoutedEventArgs e)
@@ -481,7 +518,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "S";
             else
-                this.WriteTextBlock.Text += "s";
+                this.WriteTextBlock.Text += "s"; text_checker();
         }
 
         private void D_Click(object sender, RoutedEventArgs e)
@@ -490,7 +527,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "D";
             else
-                this.WriteTextBlock.Text += "d";
+                this.WriteTextBlock.Text += "d"; text_checker();
         }
 
         private void F_Click(object sender, RoutedEventArgs e)
@@ -499,7 +536,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "F";
             else
-                this.WriteTextBlock.Text += "f";
+                this.WriteTextBlock.Text += "f"; text_checker();
         }
 
         private void G_Click(object sender, RoutedEventArgs e)
@@ -508,7 +545,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "G";
             else
-                this.WriteTextBlock.Text += "g";
+                this.WriteTextBlock.Text += "g"; text_checker();
         }
 
         private void H_Click(object sender, RoutedEventArgs e)
@@ -517,7 +554,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "H";
             else
-                this.WriteTextBlock.Text += "h";
+                this.WriteTextBlock.Text += "h"; text_checker();
         }
 
         private void J_Click(object sender, RoutedEventArgs e)
@@ -526,7 +563,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "J";
             else
-                this.WriteTextBlock.Text += "j";
+                this.WriteTextBlock.Text += "j"; text_checker();
         }
 
         private void K_Click(object sender, RoutedEventArgs e)
@@ -535,7 +572,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "K";
             else
-                this.WriteTextBlock.Text += "k";
+                this.WriteTextBlock.Text += "k"; text_checker();
         }
 
         private void L_Click(object sender, RoutedEventArgs e)
@@ -544,7 +581,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "L";
             else
-                this.WriteTextBlock.Text += "l";
+                this.WriteTextBlock.Text += "l"; text_checker();
         }
 
         private void DoubleDot_Click(object sender, RoutedEventArgs e)
@@ -553,7 +590,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += ":";
             else
-                this.WriteTextBlock.Text += ";";
+                this.WriteTextBlock.Text += ";"; text_checker();
         }
 
         private void DoubleComma_Click(object sender, RoutedEventArgs e)
@@ -562,7 +599,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "\"";
             else
-                this.WriteTextBlock.Text += "'";
+                this.WriteTextBlock.Text += "'"; text_checker();
         }
 
         private void Z_Click(object sender, RoutedEventArgs e)
@@ -571,7 +608,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "Z";
             else
-                this.WriteTextBlock.Text += "z";
+                this.WriteTextBlock.Text += "z"; text_checker();
         }
 
         private void X_Click(object sender, RoutedEventArgs e)
@@ -580,7 +617,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "X";
             else
-                this.WriteTextBlock.Text += "x";
+                this.WriteTextBlock.Text += "x"; text_checker();
         }
 
         private void C_Click(object sender, RoutedEventArgs e)
@@ -589,7 +626,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "C";
             else
-                this.WriteTextBlock.Text += "c";
+                this.WriteTextBlock.Text += "c"; text_checker();
         }
 
         private void V_Click(object sender, RoutedEventArgs e)
@@ -598,7 +635,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "V";
             else
-                this.WriteTextBlock.Text += "v";
+                this.WriteTextBlock.Text += "v"; text_checker();
         }
 
         private void B_Click(object sender, RoutedEventArgs e)
@@ -607,7 +644,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "B";
             else
-                this.WriteTextBlock.Text += "b";
+                this.WriteTextBlock.Text += "b"; text_checker();
         }
 
         private void N_Click(object sender, RoutedEventArgs e)
@@ -616,7 +653,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "N";
             else
-                this.WriteTextBlock.Text += "n";
+                this.WriteTextBlock.Text += "n"; text_checker();
         }
 
         private void M_Click(object sender, RoutedEventArgs e)
@@ -625,7 +662,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "M";
             else
-                this.WriteTextBlock.Text += "m";
+                this.WriteTextBlock.Text += "m"; text_checker();
         }
 
         private void Comma_Click(object sender, RoutedEventArgs e)
@@ -634,7 +671,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "<";
             else
-                this.WriteTextBlock.Text += ",";
+                this.WriteTextBlock.Text += ","; text_checker();
         }
 
         private void Dot_Click(object sender, RoutedEventArgs e)
@@ -643,7 +680,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += ">";
             else
-                this.WriteTextBlock.Text += ".";
+                this.WriteTextBlock.Text += "."; text_checker();
         }
 
         private void Question_Click(object sender, RoutedEventArgs e)
@@ -652,14 +689,14 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "?";
             else
-                this.WriteTextBlock.Text += "/";
+                this.WriteTextBlock.Text += "/"; text_checker();
         }
 
         private void BS_Click(object sender, RoutedEventArgs e)
         {
             key_anim(BakcSpace);
             if (this.WriteTextBlock.Text.Length != 0)
-                this.WriteTextBlock.Text = this.WriteTextBlock.Text.Remove(WriteTextBlock.Text.Length - 1);
+                this.WriteTextBlock.Text = this.WriteTextBlock.Text.Remove(WriteTextBlock.Text.Length - 1); text_checker();
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
@@ -691,7 +728,7 @@ namespace Class_Work_WPF
         private void SPACE_Click(object sender, RoutedEventArgs e)
         {
             key_anim(SPACE);
-            this.WriteTextBlock.Text += " ";
+            this.WriteTextBlock.Text += " "; text_checker();
         }
 
         private void LALT_Click(object sender, RoutedEventArgs e)
@@ -737,8 +774,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "~";
             else
-                this.WriteTextBlock.Text += "`";
-            UppComma.Background = System.Windows.Media.Brushes.Crimson;
+                this.WriteTextBlock.Text += "`"; text_checker();
         }
 
         private void One_Click(object sender, RoutedEventArgs e)
@@ -747,7 +783,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "!";
             else
-                this.WriteTextBlock.Text += "1";
+                this.WriteTextBlock.Text += "1"; text_checker();
         }
 
         private void Two_Click(object sender, RoutedEventArgs e)
@@ -756,7 +792,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "@";
             else
-                this.WriteTextBlock.Text += "2";
+                this.WriteTextBlock.Text += "2"; text_checker();
         }
 
         private void Three_Click(object sender, RoutedEventArgs e)
@@ -765,7 +801,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "#";
             else
-                this.WriteTextBlock.Text += "3";
+                this.WriteTextBlock.Text += "3"; text_checker();
         }
 
         private void Four_Click(object sender, RoutedEventArgs e)
@@ -774,7 +810,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "$";
             else
-                this.WriteTextBlock.Text += "4";
+                this.WriteTextBlock.Text += "4"; text_checker();
         }
 
         private void Five_Click(object sender, RoutedEventArgs e)
@@ -783,7 +819,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "%";
             else
-                this.WriteTextBlock.Text += "5";
+                this.WriteTextBlock.Text += "5"; text_checker();
         }
 
         private void Six_Click(object sender, RoutedEventArgs e)
@@ -792,7 +828,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "^";
             else
-                this.WriteTextBlock.Text += "6";
+                this.WriteTextBlock.Text += "6"; text_checker();
         }
 
         private void Seven_Click(object sender, RoutedEventArgs e)
@@ -801,7 +837,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "&";
             else
-                this.WriteTextBlock.Text += "7";
+                this.WriteTextBlock.Text += "7"; text_checker();
         }
 
         private void Eight_Click(object sender, RoutedEventArgs e)
@@ -810,7 +846,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "*";
             else
-                this.WriteTextBlock.Text += "8";
+                this.WriteTextBlock.Text += "8"; text_checker();
         }
 
         private void Nine_Click(object sender, RoutedEventArgs e)
@@ -819,7 +855,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "(";
             else
-                this.WriteTextBlock.Text += "9";
+                this.WriteTextBlock.Text += "9"; text_checker();
         }
 
         private void Zero_Click(object sender, RoutedEventArgs e)
@@ -828,7 +864,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += ")";
             else
-                this.WriteTextBlock.Text += "0";
+                this.WriteTextBlock.Text += "0"; text_checker();
         }
 
         private void Minus_Click(object sender, RoutedEventArgs e)
@@ -837,7 +873,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "_";
             else
-                this.WriteTextBlock.Text += "-";
+                this.WriteTextBlock.Text += "-"; text_checker();
         }
 
         private void Plus_Click(object sender, RoutedEventArgs e)
@@ -846,7 +882,7 @@ namespace Class_Work_WPF
             if (caps_on == true)
                 this.WriteTextBlock.Text += "+";
             else
-                this.WriteTextBlock.Text += "=";
+                this.WriteTextBlock.Text += "="; text_checker();
         }
 
         private void start_button_Click(object sender, RoutedEventArgs e)
@@ -865,8 +901,14 @@ namespace Class_Work_WPF
         {
             ContentBlock.Text = "";
             WriteTextBlock.Text = "";
+            fails_counter.Text = "";
             stop_button.IsEnabled = false;
             start_button.IsEnabled = true;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
