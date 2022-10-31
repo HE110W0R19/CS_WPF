@@ -1,0 +1,108 @@
+﻿<Window x:Class="TextStyleRedactor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextStyleRedactor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False" Background="Moccasin">
+            <ToolBarTray DockPanel.Dock="Top" Height="28">
+                <ToolBar Band="0" BandIndex="0">
+                    <Button x:Name="ButtonBold" Click="ButtonBold_Click">
+                        <TextBlock Text="Bold" FontWeight="Bold"/>
+                    </Button>
+
+                    <Button x:Name="ButtonItalic" Click="ButtonItalic_Click">
+                        <TextBlock FontStyle="Italic" Text="Italic"/>
+                    </Button>
+
+                    <Button x:Name="ButtonUnderline" Click="ButtonUnderline_Click">
+                        <TextBlock TextDecorations="Underline" Text="Underline"/>
+                    </Button>
+
+                    <Button x:Name="ClearButton" Click="ClearButton_Click">
+                        <TextBlock Text="Clear"/>
+                    </Button>
+                </ToolBar>
+                
+                <ToolBar>
+                    <TextBlock Text="Font Size: "/>
+                    <ComboBox x:Name="FontSizeBox" Width="30" SelectionChanged="FontSizeBox_SelectionChanged">
+
+                    </ComboBox>
+                </ToolBar>
+
+                <ToolBar Width="150">
+                    <TextBlock Text="Font Color: "/>
+                    <ComboBox x:Name="FontColorBox" Width="50" SelectionChanged="FontColorBox_SelectionChanged">
+                        <ComboBoxItem>
+                            <TextBlock Text="Black">
+                                <Label Height="10" Width="10" Background="Black"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Blue">
+                                <Label Height="10" Width="10" Background="Blue"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Green">
+                                <Label Height="10" Width="10" Background="Green"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Orange">
+                                <Label Height="10" Width="10" Background="Orange"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Purple">
+                                <Label Height="10" Width="10" Background="Purple"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Red">
+                                <Label Height="10" Width="10" Background="Red"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+
+                        <ComboBoxItem>
+                            <TextBlock Text="Yellow">
+                                <Label Height="10" Width="10" Background="Yellow"/>
+                            </TextBlock>
+                        </ComboBoxItem>
+                    </ComboBox>
+                </ToolBar>
+
+            </ToolBarTray>
+            <ToolBarTray DockPanel.Dock="Top" Height="28">
+                <ToolBar>
+                    <TextBlock Text="   Start: "/>
+                    <TextBox x:Name="StartText" Width="30" TextChanged="TextBox_TextChanged">
+                        
+                    </TextBox>
+                    <TextBlock Text="   Stop: "/>
+                    <TextBox x:Name="Stoptext" Width="30" TextChanged="TextBox_TextChanged_1">
+                        
+                    </TextBox>
+                </ToolBar>
+            </ToolBarTray>
+        </DockPanel>
+        
+        <RichTextBox x:Name="AllTextBox" Margin="10,66,10,10" Background="Ivory">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>
