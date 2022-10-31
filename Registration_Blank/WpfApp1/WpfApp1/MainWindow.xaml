@@ -9,18 +9,18 @@
     <Grid Background="Bisque">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="66*"/>
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="UserNsme" Foreground="Black" HorizontalAlignment="Center" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Grid.Column="1" Height="30" FontSize="17" FontStyle="Italic" FontWeight="Normal" TextChanged="UserNsme_TextChanged" BorderBrush="Black" FontFamily="Arial Black"/>
         <TextBox x:Name="UserEmail" Foreground="Black" HorizontalAlignment="Center" Margin="0,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Grid.Column="1" Height="30" FontSize="17" FontStyle="Italic" TextChanged="UserEmail_TextChanged" BorderBrush="Black" FontFamily="Arial Black"/>
         <TextBox x:Name="Confirm_Email" Foreground="Black" HorizontalAlignment="Center" Margin="0,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Grid.Column="1" Height="30" FontSize="17" FontStyle="Italic" TextChanged="Confirm_Email_TextChanged" BorderBrush="Black" FontFamily="Arial Black"/>
         <PasswordBox x:Name="UserPasword" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" Width="310" Grid.Column="1" Height="30" FontSize="17" BorderBrush="Black" FontFamily="Arial Black" KeyDown="EnterPass"/>
-        <Label Content=" Sign up with your email address" Grid.Column="1" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" Width="290" FontSize="18" FontWeight="Bold" Height="34" FontFamily="Arial Black"/>
-        <DatePicker x:Name="userDate" Grid.Column="1" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Width="310" DataContextChanged="DateSelecting" BorderBrush="Black"/>
-        <Label x:Name="PWN" Content="Password" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,87,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic"/>
+        <Label x:Name="Context" Content=" Sign up with your email address" HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top" Width="330" FontSize="18" FontWeight="Bold" Height="34" FontFamily="Arial Black" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="userDate" Grid.Column="1" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" Width="310" DataContextChanged="DateSelecting" BorderBrush="Black" Height="24"/>
+        <Label x:Name="PWN" Content="Password" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,87,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic" Height="33" Width="306"/>
         <Border CornerRadius="15" BorderBrush="#FFABADB3" BorderThickness="1"
-        VerticalAlignment="Top" UseLayoutRounding="True" Height="27" Margin="14,288,13,0" Grid.Column="1">
+        VerticalAlignment="Top" UseLayoutRounding="True" Height="27" Margin="14,288,5,0" Grid.Column="1">
             <Border.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF00B008" Offset="1"/>
@@ -32,8 +32,9 @@
                     FontStyle="Normal" FontFamily="Franklin Gothic Medium" FontSize="11" Height="26" Background="{x:Null}" BorderBrush="{x:Null}">
             </Button>
         </Border>
-        <Label x:Name="UNL" Content="User name" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,39,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic"/>
-        <Label x:Name="EML" Content="Email" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,136,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic"/>
-        <Label x:Name="CEL" Content="Confirm mail" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,189,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic"/>
+        <Label x:Name="UNL" Content="User name" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,39,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic" Height="33" Width="306"/>
+        <Label x:Name="EML" Content="Email" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,136,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic" Height="33" Width="306"/>
+        <Label x:Name="CEL" Content="Confirm mail" Foreground="Silver" Grid.Column="1" HorizontalAlignment="Left" Margin="14,189,0,0" VerticalAlignment="Top" FontSize="17" FontStyle="Italic" Height="33" Width="306"/>
+        <Button x:Name="LanguageButton" Content="EN" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="18" Click="Button_Click" Height="20"/>
     </Grid>
 </Window>

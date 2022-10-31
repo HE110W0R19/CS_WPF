@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -60,6 +61,30 @@ namespace WpfApp1
         private void DateSelecting(object sender, DependencyPropertyChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (LanguageButton.Content.ToString() == "EN")
+            {
+                LanguageButton.Content = Resource.EN;
+                UNL.Content = Resource.User_name;
+                PWN.Content = Resource.Password;
+                EML.Content = Resource.Email;
+                CEL.Content = Resource.Confirm_email;
+                Sign_Up_button.Content = Resource.SIGN_UP;
+                Context.Content = Resource.Sign_up_with_you_email_addres;
+            }
+            else if(LanguageButton.Content.ToString() == "RU")
+            {
+                LanguageButton.Content = RuResource.RU;
+                UNL.Content = RuResource.Имя_пользователя;
+                PWN.Content = RuResource.Пароль;
+                EML.Content = RuResource.Эл_Почта;
+                CEL.Content = RuResource.Подтверждение_эл_почты;
+                Sign_Up_button.Content = RuResource.ВХОД;
+                Context.Content = RuResource.Регестрация_через_эл_почту;
+            }
         }
     }
 }
