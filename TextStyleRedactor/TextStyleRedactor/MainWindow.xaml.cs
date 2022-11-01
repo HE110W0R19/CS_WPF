@@ -33,7 +33,6 @@ namespace TextStyleRedactor
 
         private void ButtonBold_Click(object sender, RoutedEventArgs e)
         {
-            this.StartIndex += 1; this.EndIndex += 2;
             TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
             TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
             AllTextBox.Selection.Select(S, E);
@@ -46,7 +45,6 @@ namespace TextStyleRedactor
 
         private void ButtonItalic_Click(object sender, RoutedEventArgs e)
         {
-            this.StartIndex += 1; this.EndIndex += 2;
             TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
             TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
             AllTextBox.Selection.Select(S, E);
@@ -59,42 +57,93 @@ namespace TextStyleRedactor
 
         private void ButtonUnderline_Click(object sender, RoutedEventArgs e)
         {
-            this.StartIndex += 1; this.EndIndex += 2;
             TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
             TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
             AllTextBox.Selection.Select(S, E);
             TextSelection tmp = AllTextBox.Selection;
             if (!tmp.IsEmpty)
             {
-                tmp.ApplyPropertyValue(TextDecoration.LocationProperty, TextDecorations.Underline);
+                tmp.ApplyPropertyValue(Inline.TextDecorationsProperty, TextDecorations.Underline);
             }
         }
 
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
+            TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
+            AllTextBox.Selection.Select(S, E);
+            TextSelection tmp = AllTextBox.Selection;
+            if (!tmp.IsEmpty)
+            {
+                tmp.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);
+                tmp.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+                tmp.ApplyPropertyValue(Inline.TextDecorationsProperty, TextDecorations.OverLine);
+            }
         }
 
         private void FontSizeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            double selected_size = Convert.ToDouble(FontSizeBox.SelectedItem);
+            TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
+            TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
+            AllTextBox.Selection.Select(S, E);
+            TextSelection tmp = AllTextBox.Selection;
+            if (!tmp.IsEmpty)
+            {
+                tmp.ApplyPropertyValue(TextElement.FontSizeProperty, selected_size);
+            }
         }
 
         private void FontColorBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            TextPointer S = AllTextBox.Document.ContentStart.GetPositionAtOffset(StartIndex, LogicalDirection.Forward);
+            TextPointer E = AllTextBox.Document.ContentStart.GetPositionAtOffset(EndIndex, LogicalDirection.Forward);
+            AllTextBox.Selection.Select(S, E);
+            TextSelection tmp = AllTextBox.Selection;
+            if (!tmp.IsEmpty)
+            {
+                switch (FontColorBox.SelectedIndex)
+                {
+                    case 0:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Black);
+                        break;
+                    case 1:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Blue);
+                        break;
+                    case 2:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Green);
+                        break;
+                    case 3:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Orange);
+                        break;
+                    case 4:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Purple);
+                        break;
+                    case 5:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Red);
+                        break;
+                    case 6:
+                        tmp.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Yellow);
+                        break;
+                    default:
+                        break;
+                }
+                
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (StartText.Text.Length != 0)
                 this.StartIndex = Convert.ToInt32(StartText.Text);
+            this.StartIndex += 1;
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
             if (Stoptext.Text.Length != 0)
                 this.EndIndex = Convert.ToInt32(Stoptext.Text);
+            this.EndIndex += 2;
         }
     }
 }

@@ -37,43 +37,43 @@
                 <ToolBar Width="150">
                     <TextBlock Text="Font Color: "/>
                     <ComboBox x:Name="FontColorBox" Width="50" SelectionChanged="FontColorBox_SelectionChanged">
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Black">
                             <TextBlock Text="Black">
                                 <Label Height="10" Width="10" Background="Black"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Blue">
                             <TextBlock Text="Blue">
                                 <Label Height="10" Width="10" Background="Blue"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Green">
                             <TextBlock Text="Green">
                                 <Label Height="10" Width="10" Background="Green"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Orange">
                             <TextBlock Text="Orange">
                                 <Label Height="10" Width="10" Background="Orange"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Purple">
                             <TextBlock Text="Purple">
                                 <Label Height="10" Width="10" Background="Purple"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Red">
                             <TextBlock Text="Red">
                                 <Label Height="10" Width="10" Background="Red"/>
                             </TextBlock>
                         </ComboBoxItem>
 
-                        <ComboBoxItem>
+                        <ComboBoxItem x:Name="Yellow">
                             <TextBlock Text="Yellow">
                                 <Label Height="10" Width="10" Background="Yellow"/>
                             </TextBlock>
