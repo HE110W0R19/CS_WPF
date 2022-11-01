@@ -9,6 +9,11 @@
       "Class_Work/1.0.0": {
         "runtime": {
           "Class_Work.dll": {}
+        },
+        "resources": {
+          "ru/Class_Work.resources.dll": {
+            "locale": "ru"
+          }
         }
       }
     }

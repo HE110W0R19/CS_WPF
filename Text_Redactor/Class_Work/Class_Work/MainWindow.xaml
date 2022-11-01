@@ -14,21 +14,27 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Menu Height="20" VerticalAlignment="Top" Grid.ColumnSpan="4">
-            <MenuItem Header="File" Click="MenuItem_Click_1">
-                <MenuItem Header="Open" Click="MenuItem_Click1_1"/>
-                <MenuItem Header="Save" Click="MenuItem_Click1_2"/>
-                <MenuItem Header="Save as" Click="MenuItem_Click1_3"/>
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="4">
+            <MenuItem x:Name="FIleCl" Header="File" Click="MenuItem_Click_1">
+                <MenuItem x:Name="OpenCl" Header="Open" Click="MenuItem_Click1_1"/>
+                <MenuItem x:Name="SaveCl" Header="Save" Click="MenuItem_Click1_2"/>
+                <MenuItem x:Name="SavAsCl" Header="Save as" Click="MenuItem_Click1_3"/>
             </MenuItem>
-            <MenuItem Header="Edit" Click="MenuItem_Click_2">
+            <MenuItem x:Name="EditCl" Header="Edit" Click="MenuItem_Click_2">
                 <MenuItem Header="" Click="MenuItem_Click2_1"/>
             </MenuItem>
-            <MenuItem Header="Format" Click="MenuItem_Click3">
+            <MenuItem x:Name="FormatCl" Header="Format" Click="MenuItem_Click3">
                 <MenuItem Header="" Click="MenuItem_Click3_1"/>
             </MenuItem>
+            <ComboBox x:Name="LanguageSetting" FontWeight="Bold" SelectedIndex="1" SelectionChanged="LanguageSetting_SelectionChanged">
+                <ComboBoxItem x:Name="RusLang" Content="rus"/>
+                <ComboBoxItem x:Name="EngLang" Content="eng"/>
+                <ComboBoxItem x:Name="EsLang" Content="es"/>
+                <ComboBoxItem x:Name="FrLang" Content="fr"/>
+            </ComboBox>
         </Menu>
 
-        <DockPanel LastChildFill="False" Margin="0,20,0,0" Grid.ColumnSpan="4">
+        <DockPanel LastChildFill="False" Margin="0,25,0,0" Grid.ColumnSpan="4">
 
             <ToolBarTray DockPanel.Dock="Top" Height="28">
 
@@ -107,6 +113,6 @@
 
         </DockPanel>
         <!--<TextBox x:Name="text_box" Margin="10,54,10,25" Grid.ColumnSpan="4" TextChanged="TextBox_TextChanged"/>-->
-        <RichTextBox x:Name="text_box1" Margin="10,54,10,25" Grid.ColumnSpan="4" TextChanged="text_box1_TextChanged"/>
+        <RichTextBox x:Name="text_box1" Margin="10,56,10,25" Grid.ColumnSpan="4" TextChanged="text_box1_TextChanged"/>
     </Grid>
 </Window>

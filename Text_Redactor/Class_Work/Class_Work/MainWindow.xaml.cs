@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data;
 using Microsoft.Win32;
 using System.IO;
+using System.Globalization;
 
 namespace Class_Work
 {
@@ -28,6 +29,7 @@ namespace Class_Work
         public MainWindow()
         {
             InitializeComponent();
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -133,6 +135,41 @@ namespace Class_Work
             int C = Math.Max(new TextRange(text_box1.CaretPosition.GetLineStartPosition(0),
                 text_box1.CaretPosition).Text.Length + 1, 1);
             this.Cnum.Text = C.ToString();
+        }
+
+        public void ChangeLang()
+        {
+            FIleCl.Header = LangResource.File;
+            OpenCl.Header = LangResource.Open;
+            SaveCl.Header = LangResource.Save;
+            SavAsCl.Header = LangResource.Save_as;
+            EditCl.Header = LangResource.Edit;
+            FormatCl.Header = LangResource.Format;
+        }
+
+        private void LanguageSetting_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (LanguageSetting.SelectedIndex)
+            {
+                case 0:
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                    ChangeLang();
+                    break;
+                case 1:
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                    ChangeLang();
+                    break;
+                case 2:
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("es");
+                    ChangeLang();
+                    break;
+                case 3:
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr");
+                    ChangeLang();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
