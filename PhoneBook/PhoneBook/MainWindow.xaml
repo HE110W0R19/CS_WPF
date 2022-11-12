@@ -1,0 +1,54 @@
+﻿<Window x:Class="PhoneBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <Label x:Name="LabEmail" Content="Email:" HorizontalAlignment="Left" Margin="524,114,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="45"/>
+        <Label x:Name="NameInfoLab" Content="N" HorizontalAlignment="Left" Margin="525,44,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
+        <Label x:Name="PhoneInfoLab" Content="P" HorizontalAlignment="Left" Margin="525,88,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
+        <Label x:Name="EmailInfoLab" Content="E" HorizontalAlignment="Left" Margin="524,131,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="36" FontSize="14"/>
+        <Label x:Name="LabFrom" Content="From:" HorizontalAlignment="Left" Margin="524,156,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="44"/>
+        <Label x:Name="CountryInfoLab" Content="C" HorizontalAlignment="Left" Margin="525,172,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" FontStyle="Normal" Height="37" FontSize="14"/>
+        <TextBox x:Name="FirstnameTB" Margin="721,46,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="721,24,0,0" VerticalAlignment="Top" Height="29" FontSize="9" Width="60"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="721,62,0,0" VerticalAlignment="Top" Height="29" FontSize="9" Width="59"/>
+        <TextBox x:Name="LastNameTB" Margin="721,84,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" TextChanged="LastNameTB_TextChanged"/>
+        <ComboBox x:Name="CountryPhoneCB" HorizontalAlignment="Left" Margin="722,122,0,0" VerticalAlignment="Top" Width="58" Height="18" SelectionChanged="CountryPhoneCB_SelectionChanged">
+            <ComboBoxItem>+7</ComboBoxItem>
+            <ComboBoxItem>+375</ComboBoxItem>
+            <ComboBoxItem>+32</ComboBoxItem>
+            <ComboBoxItem>+1264</ComboBoxItem>
+            <ComboBoxItem>+93</ComboBoxItem>
+            <ComboBoxItem>+244</ComboBoxItem>
+            <ComboBoxItem>+880</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Phone Number" HorizontalAlignment="Left" Margin="721,102,0,0" VerticalAlignment="Top" Height="27" FontSize="9" Width="80"/>
+        <TextBox x:Name="PhoneNumberTB" Margin="786,122,9,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" TextChanged="PhoneNumberTB_TextChanged"/>
+        <Label Content="Personal Email" HorizontalAlignment="Left" Margin="721,138,0,0" VerticalAlignment="Top" Height="26" FontSize="9" Width="76"/>
+        <TextBox x:Name="PersonalEmailTB" Margin="721,160,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" TextChanged="PersonalEmailTB_TextChanged"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="721,189,0,0" VerticalAlignment="Top" Width="79" Height="20" FontSize="10" Click="SaveButton_Click" IsEnabled="False"/>
+        <Button x:Name="CanselButton" Content="Cancel" Margin="812,189,10,0" VerticalAlignment="Top" Height="20" FontSize="10" Click="CanselButton_Click"/>
+        <Label x:Name="LabPhoneNumber" Content="Mobile Phone:" HorizontalAlignment="Left" Margin="525,71,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="92"/>
+        <Label x:Name="LabName" Content="Name:" HorizontalAlignment="Left" Margin="525,27,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="48"/>
+
+        <ListBox x:Name="AllUsersList" Margin="10,24,381,10" SelectionChanged="AllUsersList_SelectionChanged">
+            <!--<ListBoxItem>
+                <Canvas x:Name="allinfo" Width="470" Height="21">
+                    <Label x:Name="name" Width="120" Height="21"  FontSize="10" Canvas.Left="0" Content="1231312313132"/>
+                    <Label x:Name="email" Width="120" Height="21" FontSize="10" Canvas.Left="120" Content="1312323"/>
+                    <Label x:Name="phone" Width="120" Height="21" FontSize="10" Canvas.Left="240" Content="123123123"/>
+                    <Button x:Name="edit" Height="21" Width="40" Content="Edit" FontSize="10" Click="edit_Click" Canvas.Right="45"/>
+                    <Button x:Name="delete" Height="21" Width="40" Content="Delete" FontSize="10" Canvas.Right="0" Click="delete_Click"/>
+                </Canvas>
+            </ListBoxItem>-->
+        </ListBox>
+        <Label Content="Full Name:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="136,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Phone numbers:" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
