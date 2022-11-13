@@ -14,12 +14,14 @@ namespace PhoneBook
             string Email = "";
             string Phone = "";
             string From = "";
+            int CountryIndex = -1;
             public UserInfo(string fN, string lN, string E, string P, int FromIndex)
             {
                 this.fName = fN; this.lName = lN;
                 this.Name = $"{fName} {lName}";
                 this.Email = E;
-                switch (FromIndex)
+                CountryIndex = FromIndex;
+                switch (CountryIndex)
                 {
                     case 0:
                         this.Phone += "+7 ";
@@ -55,12 +57,16 @@ namespace PhoneBook
                 this.Phone += P;
             }
             public string name => Name;
+            public string Fname => fName;
+            public string Lname => lName;
             public string email => Email;
             public string phone => Phone;
             public string from => From;
+            public int CountryID => CountryIndex;
         }
         public class CustomItem
         {
+            public UserInfo UInfo;
             public Canvas AllInfoBlock;
             public Label NameLabel;
             public Label EmailLabel;
@@ -70,6 +76,8 @@ namespace PhoneBook
             public CustomItem(UserInfo UI)
             {
                 AllInfoBlock = new Canvas();
+                UInfo = new UserInfo("", "", "", "", 0);
+                UInfo = UI;
 
                 NameLabel = new Label();
                 NameLabel.Width = 125;
@@ -97,9 +105,9 @@ namespace PhoneBook
                 DeleteButton.Height = 23;
                 Canvas.SetLeft(DeleteButton, 425);
 
-                NameLabel.Content = UI.name;
-                EmailLabel.Content = UI.email;
-                PhoneLablel.Content = UI.phone;
+                NameLabel.Content = UInfo.name;
+                EmailLabel.Content = UInfo.email;
+                PhoneLablel.Content = UInfo.phone;
                 EditButton.Content = "Edit";
                 DeleteButton.Content = "Delete";
             }
@@ -118,17 +126,11 @@ namespace PhoneBook
                 tmp.Content = AllInfoBlock;
                 list.Items.Add(tmp);
             }
-            public void EditButtonClick()
-            {
-
-            }
-            public void DeleteButtonClick()
-            {
-
-            }
         }
 
-        List<UserInfo> users = new List<UserInfo>();
+        List<CustomItem> users = new List<CustomItem>();
+        bool IsEdit = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -136,18 +138,29 @@ namespace PhoneBook
 
         private void AllUsersList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.NameInfoLab.Content = users[AllUsersList.SelectedIndex].name;
-            this.PhoneInfoLab.Content = users[AllUsersList.SelectedIndex].phone;
-            this.EmailInfoLab.Content = users[AllUsersList.SelectedIndex].email;
-            this.CountryInfoLab.Content = users[AllUsersList.SelectedIndex].from;
+            if (this.AllUsersList.SelectedIndex >= 0)
+            {
+                this.NameInfoLab.Content = users[AllUsersList.SelectedIndex].UInfo.name;
+                this.PhoneInfoLab.Content = users[AllUsersList.SelectedIndex].UInfo.phone;
+                this.EmailInfoLab.Content = users[AllUsersList.SelectedIndex].UInfo.email;
+                this.CountryInfoLab.Content = users[AllUsersList.SelectedIndex].UInfo.from;
+            }
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (this.IsEdit == true)
+            {
+                this.users.RemoveAt(this.AllUsersList.SelectedIndex);
+                this.IsEdit = false;
+            }
             var UI = new UserInfo(FirstnameTB.Text, LastNameTB.Text, PersonalEmailTB.Text, PhoneNumberTB.Text, CountryPhoneCB.SelectedIndex);
             var CI = new CustomItem(UI);
             CI.AddInfo(ref AllUsersList);
-            users.Add(UI);
+            CI.DeleteButton.Click += delete_Click;
+            CI.EditButton.Click += edit_Click;
+            users.Add(CI);
+            this.AllUsersList.SelectedIndex = 0;
         }
 
         public void CheckSaveButtonStatus()
@@ -187,17 +200,35 @@ namespace PhoneBook
         
         private void CanselButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.FirstnameTB.Text = "";
+            this.LastNameTB.Text = "";
+            this.PhoneNumberTB.Text = "";
+            this.CountryPhoneCB.SelectedIndex = -1;
+            this.PersonalEmailTB.Text = "";
         }
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (this.AllUsersList.SelectedIndex >= 0)
+            {
+                this.users.RemoveAt(AllUsersList.SelectedIndex);
+                this.AllUsersList.Items.Remove(AllUsersList.SelectedItem);
+            }
         }
 
         private void edit_Click(object sender, RoutedEventArgs e)
         {
-
+            if (this.AllUsersList.SelectedIndex >= 0)
+            {
+                IsEdit = true;
+                int SelectedIndex = this.AllUsersList.SelectedIndex;
+                this.FirstnameTB.Text = this.users[SelectedIndex].UInfo.Fname;
+                this.LastNameTB.Text = this.users[SelectedIndex].UInfo.Lname;
+                this.PhoneNumberTB.Text = this.users[SelectedIndex].UInfo.phone.
+                    Remove(0, this.users[SelectedIndex].UInfo.phone.IndexOf(" ") + 1);
+                this.PersonalEmailTB.Text = this.users[SelectedIndex].UInfo.email;
+                this.CountryPhoneCB.SelectedIndex = this.users[SelectedIndex].UInfo.CountryID;
+            }
         }
 
         private void PersonalEmailTB_TextChanged(object sender, TextChangedEventArgs e)

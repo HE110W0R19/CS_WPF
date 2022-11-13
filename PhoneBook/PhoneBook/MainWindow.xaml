@@ -8,11 +8,11 @@
         Title="MainWindow" Height="450" Width="900">
     <Grid>
         <Label x:Name="LabEmail" Content="Email:" HorizontalAlignment="Left" Margin="524,114,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="45"/>
-        <Label x:Name="NameInfoLab" Content="N" HorizontalAlignment="Left" Margin="525,44,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
-        <Label x:Name="PhoneInfoLab" Content="P" HorizontalAlignment="Left" Margin="525,88,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
-        <Label x:Name="EmailInfoLab" Content="E" HorizontalAlignment="Left" Margin="524,131,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="36" FontSize="14"/>
+        <Label x:Name="NameInfoLab" Content="" HorizontalAlignment="Left" Margin="525,44,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
+        <Label x:Name="PhoneInfoLab" Content="" HorizontalAlignment="Left" Margin="525,88,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="37" FontSize="14"/>
+        <Label x:Name="EmailInfoLab" Content="" HorizontalAlignment="Left" Margin="524,131,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" Height="36" FontSize="14"/>
         <Label x:Name="LabFrom" Content="From:" HorizontalAlignment="Left" Margin="524,156,0,0" VerticalAlignment="Top" FontSize="10" Height="33" Width="44"/>
-        <Label x:Name="CountryInfoLab" Content="C" HorizontalAlignment="Left" Margin="525,172,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" FontStyle="Normal" Height="37" FontSize="14"/>
+        <Label x:Name="CountryInfoLab" Content="" HorizontalAlignment="Left" Margin="525,172,0,0" VerticalAlignment="Top" Width="189" FontWeight="Bold" FontStyle="Normal" Height="37" FontSize="14"/>
         <TextBox x:Name="FirstnameTB" Margin="721,46,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="721,24,0,0" VerticalAlignment="Top" Height="29" FontSize="9" Width="60"/>
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="721,62,0,0" VerticalAlignment="Top" Height="29" FontSize="9" Width="59"/>

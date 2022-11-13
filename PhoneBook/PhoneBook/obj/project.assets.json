@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TuF\\Desktop\\Programs\\C#\\WPF\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+      "projectUniqueName": "C:\\Users\\TuF\\Documents\\GitHub\\CS_WPF\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
       "projectName": "PhoneBook",
-      "projectPath": "C:\\Users\\TuF\\Desktop\\Programs\\C#\\WPF\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
+      "projectPath": "C:\\Users\\TuF\\Documents\\GitHub\\CS_WPF\\PhoneBook\\PhoneBook\\PhoneBook.csproj",
       "packagesPath": "C:\\Users\\TuF\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TuF\\Desktop\\Programs\\C#\\WPF\\PhoneBook\\PhoneBook\\obj\\",
+      "outputPath": "C:\\Users\\TuF\\Documents\\GitHub\\CS_WPF\\PhoneBook\\PhoneBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TuF\\AppData\\Roaming\\NuGet\\NuGet.Config",
