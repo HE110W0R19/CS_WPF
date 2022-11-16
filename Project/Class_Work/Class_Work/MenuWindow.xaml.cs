@@ -48,5 +48,11 @@ namespace Class_Work
                     break;
             }
         }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            this.Close();
+        }
     }
 }
